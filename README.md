@@ -79,9 +79,9 @@ streamlit run app.py
 📚 References
 * Kaggle Dataset - https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
 
-* scikit-learn
+* scikit-learn - https://scikit-learn.org/stable/
 
-* NLTK
+* NLTK - https://www.nltk.org/
 
-* Streamlit
+* Streamlit - https://streamlit.io/
 
