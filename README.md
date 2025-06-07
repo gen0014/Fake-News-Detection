@@ -1,101 +1,85 @@
-📰 Fake News Detection using NLP & Machine Learning
-This project aims to identify and classify fake news articles using Natural Language Processing (NLP) and Machine Learning. A simple and interactive Streamlit web app is deployed for real-time predictions.
+# 📰 Fake News Detection Using NLP & Machine Learning
 
-🔍 Problem Statement
-With the rise of online platforms and social media, fake news has become a major concern. This project addresses the need for an automated system to detect fake news articles and prevent the spread of misinformation.
+This project aims to automatically classify news articles as **Real** or **Fake** using Natural Language Processing (NLP) and a Machine Learning model.  
+A **Streamlit web app** is included to allow users to test articles via text input or file upload (`.txt`, `.docx`, `.pdf`).
 
-✅ Features
-Detects whether a news article is REAL or FAKE
+---
 
-Trained on a labeled dataset from Kaggle
+## 🔍 Problem Statement
 
-Includes NLP preprocessing: tokenization, stemming, stopword removal
+With the rise of misinformation and fake news on social media and online platforms, there is a critical need for automated fake news detection systems.  
+This project solves that by using a labeled dataset to train a machine learning classifier that can distinguish between real and fake news articles.
 
-Uses TF-IDF for text vectorization
+---
 
-Built with Random Forest Classifier
+## ✅ Features
 
-Deployed as a Streamlit app for easy usage
+- Predict whether a news article is REAL or FAKE
+- Upload `.txt`, `.docx`, or `.pdf` files for automatic classification
+- Clean and preprocess news content using NLP techniques
+- Web interface built using **Streamlit**
+- Supports both manual input and file-based input
 
-📁 Dataset
-Dataset used:
-🗂️ Fake and Real News Dataset (Kaggle)
+---
 
-Fake.csv - Fake news articles
+## 🧠 Model & Methodology
 
-True.csv - Real news articles
+- **Preprocessing**: Tokenization, stopword removal, stemming
+- **Feature Extraction**: TF-IDF Vectorization
+- **Model Used**: Random Forest Classifier
+- **Accuracy Achieved**: ~95% on test data
 
-Combined and labeled as 0 (fake) and 1 (real)
+---
 
-🧪 Tech Stack
-Tool / Library	Purpose
-Python	Programming language
-Pandas, NumPy	Data manipulation
-scikit-learn	Machine learning models
-NLTK	Text preprocessing (NLP)
-TF-IDF	Text vectorization
-Streamlit	Web application framework
-Pickle	Saving trained models
+## 🛠️ Tech Stack
 
-🚀 How to Run the Project
-1. Clone the repository
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/fake-news-detection.git
-cd fake-news-detection
-2. Install dependencies
-bash
-Copy
-Edit
+| Component      | Tool / Library             |
+|----------------|----------------------------|
+| Programming    | Python                     |
+| NLP            | NLTK                       |
+| ML             | scikit-learn               |
+| Vectorization  | TfidfVectorizer            |
+| Web App        | Streamlit                  |
+| File Parsing   | python-docx, PyPDF2        |
+
+---
+
+## Install dependencies - 
 pip install -r requirements.txt
-Note: Make sure NLTK stopwords are downloaded in the first run.
+pip install python-docx PyPDF2
 
-3. Train the model (if not already trained)
-bash
-Copy
-Edit
-python train_model.py
-4. Launch the Streamlit app
-bash
-Copy
-Edit
+## Run the Streamlit app-
 streamlit run app.py
-🧠 Model Training Details
-Preprocessing: Lowercase conversion, punctuation removal, stopword filtering, stemming
 
-Vectorization: TF-IDF (Top 5000 features)
+🔄 Input Options
+* Paste article text in the input box
 
-Model: Random Forest Classifier
+* OR upload a .txt, .docx, or .pdf file
 
-Accuracy Achieved: ~95% on test set
+* Example files are available in the news_examples/ folder.
 
-🌐 Streamlit App Preview
-Input Text	Prediction
-“Breaking: Vaccine proven 100% effective”	✅ REAL
-“Aliens landed in US – Government hides it”	🚨 FAKE
+📈 Results Snapshot
+* Accuracy: 95%
 
-📈 Results & Evaluation
-Accuracy: ~95%
+* Algorithm: Random Forest
 
-Precision, Recall: Shown in classification report
-
-Streamlit UI provides real-time prediction feedback
+* Input Format: Cleaned text → TF-IDF → Classification
 
 🔮 Future Scope
-Use BERT or other transformer-based models
+* Switch to transformer-based models (e.g., BERT)
 
-Multilingual fake news detection
+* Add real-time social media integration
 
-Real-time social media integration
+* Support multilingual detection
 
-Classify satire, clickbait, or biased articles
+* Visual analytics for fake news trends
 
 📚 References
-Kaggle Dataset
+* Kaggle Dataset - https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
 
-Scikit-learn Documentation
+* scikit-learn
 
-NLTK Documentation
+* NLTK
 
-Streamlit Docs
+* Streamlit
+
