@@ -51,6 +51,8 @@ pip install python-docx PyPDF2
 ## Run the Streamlit app-
 streamlit run app.py
 
+---
+
 🔄 Input Options
 * Paste article text in the input box
 
